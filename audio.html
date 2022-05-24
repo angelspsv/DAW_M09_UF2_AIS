@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./cssAudioFile.css">
+    <title>Audio - CD</title>
+</head>
+<body>
+    <div class="general">
+        <div class="esquerra">
+            <div><img id="spotify" src="./Spotify_logo.png" alt="logo" width="50" height="50"></div>
+            <div><img id="img" src="./bohemian2.jpg" alt="caratula" width="450" height="450"></div>
+        </div>
+        <div class="dret">
+            <div class="un">
+                <div class="grup">Queen</div>
+                <span>Álbum</span>
+                <p class="nom">Bohemian Rhapsody</p>
+            </div>
+            <div class="dos">
+                <div class="dosuno"><p id="canciones">Canciones</p><p>1. 20th Century Fox Fanfare - Alfred Newman, arr. Brian May<br> 2. Somebody to Love - Freddie Mercury<br> 3. Doing All Right... Revisited - Brian May, Tim Staffell<br>4. Keep Yourself Alive - Brian May<br> 5. Killer Queen - Freddie Mercury<br> 6. Fat Bottomed Girls - Brian May<br> 7. Bohemian Rhapsody - Freddie Mercury<br> 8. Now I'm Here - Brian May<br> 9. Crazy Little Thing Called Love - Freddie Mercury<br> 10. Love of My Life - Freddie Mercury</p></div>
+                <div class="dosdos">
+                    <div class="left">
+                        <p id="volume_show">90</p>
+                        <div class="volume">
+                            <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+                            <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">
+                        </div>
+                    </div>
+
+                    <div class="rigth">
+                        <div class="show_song_no">
+                            <span id="present">1</span>
+                            <span>/</span>
+                            <span id="total">10</span>
+                        </div>
+                    </div>
+
+                    <p id="title">title.mp3</p>
+                    <p id="artist">Artist name</p>
+
+                    <div class="middle">
+                        <button onclick="previous_song()" id="pre"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+                        <button onclick="justplay()" id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+                        <button onclick="next_song()" id="next"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+                    </div>
+
+                    <div class="duration">
+                        <input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--- fitxer javascript --->
+    <script src="./audioScript.js"></script>
+
+</body>
+</html>
